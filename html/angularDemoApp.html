@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>define method</title>
+    <link src="" rel="stylesheet" href="../css/style.css"/>
+    <script></script>
+</head>
+
+<body ng-app="angularDemoApp">
+
+<input type="text" ng-model="search" />
+
+<div ng-controller="ShowDetailsController">
+    <table>
+        <tr ng-repeat = "member in nodeJSTeamDetailsData.data | filter: search">
+
+        <td>{{member.EmpID}}</td>
+        <td>{{member.FirstName}}</td>
+        <td>{{member.LastName}}</td>
+        </tr>
+
+    </table>
+
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+<script src="../javaScripts/intelliGrapeController.js"></script>
+</body>
+
+</html>
